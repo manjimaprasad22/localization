@@ -4,7 +4,9 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
-
+import { Provider } from "react-redux";
+import { store, persistor } from "./store/store";
+import { PersistGate } from "redux-persist/integration/react";
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'flag-icon-css/css/flag-icons.min.css'
@@ -24,9 +26,7 @@ i18n
   backend:{
     loadPath: '/assests/locales/{{lng}}/translation.json',
   },
-
   });
-
 
 const loadingMarkup =(
   <div className='py-4 text-center'>
@@ -39,7 +39,11 @@ const loadingMarkup =(
 ReactDOM.render(
   <Suspense fallback={loadingMarkup}>
       <React.StrictMode>
+      <Provider store={store}>
+      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
     <App />
+    </PersistGate>
+    </Provider>
   </React.StrictMode>
   </Suspense>,
 
