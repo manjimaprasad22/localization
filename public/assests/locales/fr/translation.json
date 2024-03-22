@@ -2,5 +2,6 @@
   "app_title": "Titre",
   "language": "Langue",
   "welcome_message": "Bienvenue",
-  "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo"
+  "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo",
+  "text":"C'est un fait établi depuis longtemps qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il examinera sa mise en page. L'intérêt d'utiliser le Lorem Ipsum est qu'il a une distribution de lettres plus ou moins normale, par opposition à l'utilisation de « Contenu ici, contenu ici », ce qui donne l'impression qu'il s'agit d'un anglais lisible."
 }
