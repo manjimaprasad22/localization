@@ -5,6 +5,7 @@ import cookies from "js-cookie";
 import Home from "./views/Home";
 import Detailpage from "./views/Detailpage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FlipDemo from "./views/FlipDemo";
 
 
 
@@ -40,6 +41,7 @@ useEffect(() => {
       <Routes>
         <Route path="/" element={<Home />} />     
         <Route path="/detail" element={<Detailpage />} />     
+        <Route path="/next" element={<FlipDemo />} />     
       </Routes>
        </Router>
     </div>
